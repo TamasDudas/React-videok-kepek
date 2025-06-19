@@ -3,9 +3,9 @@ import Main from './components/Main';
 import Aside from './components/Aside';
 import Header from './components/Header';
 import Navbar from './components/Navbar';
-import Pictures from './components/gallery/Pictures';
 import Home from './components/Home';
 import Footer from './components/Footer';
+import Account from './components/Account';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,12 +14,13 @@ function App() {
     <div>
       <Header title="Kedvenc Videoim és képeim" />
       <Navbar />
-      <div className="flex justify-center">
+      <div className="flex justify-center bg-gray-400">
         <Main>
           <Home />
+          <Account />
         </Main>
         <Aside>aside content</Aside>
-      </div>{' '}
+      </div>
       <Footer />
     </div>
   );
