@@ -106,12 +106,12 @@ export default function AccountCard({
         </div>
         {/* Gombok */}
         <div className="flex gap-3 justify-center mt-5">
-          <button className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
+          <button className="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-700 transition-colors">
             {btnName}
           </button>
           {isSigin && (
             <button
-              className="px-4 py-2 border border-gray-300 bg-white rounded hover:bg-gray-50 transition-colors"
+              className="px-4 py-2 border border-gray-300 bg-red-500 text-white rounded hover:bg-gray-50 transition-colors"
               onClick={deleteData}
             >
               {clear}
