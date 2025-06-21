@@ -63,5 +63,12 @@ export default function Videos({ showLimited = false }) {
     />
   );
 
-  return <Card items={displayVideos} renderItem={renderVideo} />;
+  return (
+    <div>
+      {!showLimited && (
+        <h3 className="text-2xl font-semibold  my-3 ">Videók</h3>
+      )}
+      <Card items={displayVideos} renderItem={renderVideo} />
+    </div>
+  );
 }

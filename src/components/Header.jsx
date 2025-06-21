@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header({ title }) {
   return (
-    <div className="bg-gray-500 flex justify-center items-center h-20 w-full text-2xl font-bold text-white">
+    <div className="bg-gray-900 flex justify-center items-center h-40 w-full text-4xl font-bold text-white">
       {title}
     </div>
   );

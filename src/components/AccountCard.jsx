@@ -42,6 +42,10 @@ export default function AccountCard({
       });
   };
 
+  const deleteData = () => {
+    setFormData(initialData);
+  };
+
   return (
     <div className="h-full flex flex-col justify-center">
       <h4 className="mb-5 text-center text-lg font-medium">{formName}</h4>
@@ -106,7 +110,10 @@ export default function AccountCard({
             {btnName}
           </button>
           {isSigin && (
-            <button className="px-4 py-2 border border-gray-300 bg-white rounded hover:bg-gray-50 transition-colors">
+            <button
+              className="px-4 py-2 border border-gray-300 bg-white rounded hover:bg-gray-50 transition-colors"
+              onClick={deleteData}
+            >
               {clear}
             </button>
           )}

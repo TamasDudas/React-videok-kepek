@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from '../Components/Card';
 import Bruno from '../assets/bruno.jpg';
 import Collie from '../assets/collie.jpg';
@@ -69,5 +68,10 @@ export default function Pictures({ showLimited = false }) {
     />
   );
 
-  return <Card items={displayPictures} renderItem={renderPicture} />;
+  return (
+    <div>
+      {!showLimited && <h3 className="text-2xl font-semibold  my-3">Képek</h3>}
+      <Card items={displayPictures} renderItem={renderPicture} />
+    </div>
+  );
 }

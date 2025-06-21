@@ -3,7 +3,6 @@ import AccountCard from '../Components/AccountCard';
 export default function Account() {
   return (
     <div>
-      <h3 className="my-6">Belépés és Regisztráció</h3>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-4 mb-6 ">
         <div>
           <AccountCard formName="Belépés" btnName="Belépés" clear="Törlés" />
