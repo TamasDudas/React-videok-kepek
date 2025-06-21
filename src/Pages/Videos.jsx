@@ -1,3 +1,6 @@
+import React from 'react';
+import Card from '../Components/Card';
+
 const videos = [
   {
     id: 1,
@@ -49,25 +52,16 @@ const videos = [
 export default function Videos({ showLimited = false }) {
   const displayVideos = showLimited ? videos.slice(0, 3) : videos;
 
-  return (
-    <div className="flex flex-wrap justify-center mx-auto">
-      {displayVideos.map((video) => (
-        <div key={video.id} className="w-full sm:w-1/2 md:w-1/3 p-2">
-          <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src={video.url}
-              title={video.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
-          <p className="text-center mt-2 text-sm text-gray-600">
-            {video.title}
-          </p>
-        </div>
-      ))}
-    </div>
+  const renderVideo = (video) => (
+    <iframe
+      className="object-cover w-full h-full"
+      src={video.url}
+      title={video.title}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerPolicy="strict-origin-when-cross-origin"
+      allowFullScreen
+    />
   );
+
+  return <Card items={displayVideos} renderItem={renderVideo} />;
 }
